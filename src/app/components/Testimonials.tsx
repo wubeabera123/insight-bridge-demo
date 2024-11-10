@@ -3,22 +3,22 @@ import React from 'react';
 
 const testimonials = [
   {
-    name: 'Priya Sharma',
-    role: 'RAS Officer, 2023 Batch',
+    name: 'Sarah Chen',
+    role: 'Marketing Director',
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150',
-    content: 'RAS-Pro\'s structured approach and comprehensive material helped me secure a top rank. The interactive features made learning engaging and effective.'
+    content: 'This platform revolutionized our customer support. The AI bot we built handles 80% of routine inquiries, letting our team focus on complex cases. The ROI has been incredible.'
   },
   {
-    name: 'Rahul Mehra',
-    role: 'Current Aspirant',
+    name: 'Michael Torres', 
+    role: 'Startup Founder',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150',
-    content: 'The progress tracking and performance analytics have completely transformed my preparation strategy. I can focus on my weak areas effectively.'
+    content: 'As a solo founder, having an AI bot handle user onboarding 24/7 has been a game-changer. The no-code builder made it super easy to create a sophisticated bot in hours.'
   },
   {
-    name: 'Anjali Gupta',
-    role: 'RAS Officer, 2022 Batch',
+    name: 'Emma Watson',
+    role: 'E-commerce Owner',
     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150',
-    content: 'The mock tests and personalized feedback system gave me the confidence I needed. RAS-Pro\'s community support is exceptional.'
+    content: 'Our sales have increased by 40% since implementing the product recommendation bot. The AI understanding of customer preferences is remarkable.'
   }
 ];
 
@@ -28,10 +28,10 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
-            Success Stories
+            What Our Customers Say
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Join thousands of successful aspirants who trusted RAS-Pro for their preparation
+            Join thousands of businesses transforming their Telegram presence with AI bots
           </p>
         </div>
 

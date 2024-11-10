@@ -1,46 +1,46 @@
-import { BookOpen, Map, Timer, Brain, Users, BarChart, Smartphone, RefreshCw } from 'lucide-react';
+import { Bot, Code, Zap, Brain, Users, BarChart, Smartphone, RefreshCw } from 'lucide-react';
 import React from 'react';
 
 const features = [
   {
-    icon: BookOpen,
-    title: 'Content Categorization',
-    description: 'Well-organized study material divided by subjects and topics'
-  },
-  {
-    icon: BarChart,
-    title: 'Progress Tracking',
-    description: 'Monitor your preparation with detailed analytics'
-  },
-  {
-    icon: Map,
-    title: 'Interactive Maps',
-    description: 'Learn geography with interactive state and country maps'
+    icon: Bot,
+    title: 'No-Code Builder',
+    description: 'Create sophisticated Telegram bots without any coding knowledge'
   },
   {
     icon: Brain,
-    title: 'Smart Analytics',
-    description: 'AI-powered performance insights and recommendations'
+    title: 'AI-Powered',
+    description: 'Leverage advanced AI to understand and respond to user messages'
+  },
+  {
+    icon: Code,
+    title: 'Custom Integration',
+    description: 'Connect your bot with external APIs and services seamlessly'
+  },
+  {
+    icon: Zap,
+    title: 'Instant Deployment',
+    description: 'Deploy your bot to Telegram with just one click'
   },
   {
     icon: Users,
-    title: 'Community Support',
-    description: 'Connect with peers and experts for doubt resolution'
+    title: 'Multi-User Support',
+    description: 'Handle thousands of concurrent users effortlessly'
   },
   {
-    icon: Timer,
-    title: 'Focused Study',
-    description: 'Built-in tools for time management and concentration'
+    icon: BarChart,
+    title: 'Analytics Dashboard',
+    description: 'Track user engagement and bot performance in real-time'
   },
   {
     icon: Smartphone,
-    title: 'Mobile Ready',
-    description: 'Study on any device with our responsive platform'
+    title: 'Cross-Platform',
+    description: 'Build and manage bots from any device, anywhere'
   },
   {
     icon: RefreshCw,
-    title: 'Regular Updates',
-    description: 'Stay current with the latest exam patterns and syllabus'
+    title: 'Auto Updates',
+    description: 'Always stay current with automatic AI model updates'
   }
 ];
 
@@ -50,10 +50,10 @@ export default function Features() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
-            Everything You Need to Succeed
+            Build Powerful AI Bots in Minutes
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Our comprehensive platform provides all the tools and resources required for RAS exam preparation
+            Create, deploy and scale intelligent Telegram bots without writing a single line of code
           </p>
         </div>
 
