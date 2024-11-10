@@ -24,13 +24,13 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <div className="bg-white py-24">
+    <div className="bg-gray-900 py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#1A2B4A] mb-4">
+          <h2 className="text-4xl font-bold text-white mb-4">
             Success Stories
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Join thousands of successful aspirants who trusted RAS-Pro for their preparation
           </p>
         </div>
@@ -39,15 +39,15 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="bg-gray-50 rounded-xl p-8 relative"
+              className="bg-gray-800 rounded-xl p-8 relative border border-gray-700"
             >
               <div className="flex items-center gap-2 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-[#FFD700] text-[#FFD700]" />
                 ))}
               </div>
-              <p className="text-gray-600 mb-6">
-                "{testimonial.content}"
+              <p className="text-gray-300 mb-6">
+                &ldquo;{testimonial.content}&rdquo;
               </p>
               <div className="flex items-center gap-4">
                 <img 
@@ -56,10 +56,10 @@ export default function Testimonials() {
                   className="w-12 h-12 rounded-full object-cover"
                 />
                 <div>
-                  <h4 className="font-semibold text-[#1A2B4A]">
+                  <h4 className="font-semibold text-white">
                     {testimonial.name}
                   </h4>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-400">
                     {testimonial.role}
                   </p>
                 </div>

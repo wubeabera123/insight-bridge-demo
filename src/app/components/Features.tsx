@@ -46,13 +46,13 @@ const features = [
 
 export default function Features() {
   return (
-    <div className="bg-white py-24">
+    <div className="bg-gray-900 py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#1A2B4A] mb-4">
+          <h2 className="text-4xl font-bold text-white mb-4">
             Everything You Need to Succeed
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Our comprehensive platform provides all the tools and resources required for RAS exam preparation
           </p>
         </div>
@@ -63,15 +63,15 @@ export default function Features() {
             return (
               <div 
                 key={index}
-                className="p-6 rounded-xl border border-gray-200 hover:border-[#0066CC] transition-colors group"
+                className="p-6 rounded-xl border border-gray-700 bg-gray-800 hover:border-blue-500 transition-colors group"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#0066CC] transition-colors">
-                  <Icon className="w-6 h-6 text-[#0066CC] group-hover:text-white" />
+                <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
+                  <Icon className="w-6 h-6 text-blue-400 group-hover:text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-[#1A2B4A] mb-2">
+                <h3 className="text-xl font-semibold text-white mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-300">
                   {feature.description}
                 </p>
               </div>

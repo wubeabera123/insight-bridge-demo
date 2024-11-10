@@ -12,16 +12,16 @@ export default function Footer() {
               Empowering aspirants with comprehensive preparation tools and resources for RAS exam success.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-[#34A853] transition-colors">
+              <a href="#" className="text-gray-400 hover:text-[#34A853] transition-colors">
                 <Facebook className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-[#34A853] transition-colors">
+              <a href="#" className="text-gray-400 hover:text-[#34A853] transition-colors">
                 <Twitter className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-[#34A853] transition-colors">
+              <a href="#" className="text-gray-400 hover:text-[#34A853] transition-colors">
                 <Instagram className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-[#34A853] transition-colors">
+              <a href="#" className="text-gray-400 hover:text-[#34A853] transition-colors">
                 <Youtube className="w-6 h-6" />
               </a>
             </div>
