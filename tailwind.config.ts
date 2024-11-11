@@ -1,11 +1,11 @@
-<<<<<<< Updated upstream
 import type { Config } from "tailwindcss"
 import tailwindAnimate from "tailwindcss-animate"
-=======
-import type { Config } from "tailwindcss";
-import colors from "tailwindcss/colors";
-import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
->>>>>>> Stashed changes
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config = {
   darkMode: ["class"],
@@ -74,45 +74,27 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-<<<<<<< Updated upstream
         "infinite-scroll": {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-50%)" },
-=======
+        },
         scroll: {
-          to: {
-            transform: "translate(calc(-50% - 0.5rem))",
-          },
->>>>>>> Stashed changes
+          from: { transform: "translateX(0)" },
+          to: { transform: "translate(calc(-50% - 0.5rem))" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-<<<<<<< Updated upstream
         "infinite-scroll": "infinite-scroll 20s linear infinite",
-=======
-        scroll:
-          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
->>>>>>> Stashed changes
+        scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
-      
     },
   },
-<<<<<<< Updated upstream
-  plugins: [tailwindAnimate],
+  plugins: [tailwindAnimate, addVariablesForColors],
 } satisfies Config
-=======
-  plugins: [import("tailwindcss-animate"), addVariablesForColors],
-} satisfies Config;
->>>>>>> Stashed changes
 
-interface AddVariablesForColorsProps {
-  addBase: (base: Record<string, unknown>) => void;
-  theme: (path: string) => Record<string, string>;
-}
-
-function addVariablesForColors({ addBase, theme }: AddVariablesForColorsProps) {
+function addVariablesForColors({ addBase, theme }: any) {
   const allColors = flattenColorPalette(theme("colors"));
   const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
@@ -123,4 +105,4 @@ function addVariablesForColors({ addBase, theme }: AddVariablesForColorsProps) {
   });
 }
 
-export default config;
+export default config
