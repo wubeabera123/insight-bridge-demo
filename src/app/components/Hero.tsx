@@ -6,7 +6,7 @@ import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
 
 export default function Hero() {
   return (
-    <div className="relative bg-gradient-to-b from-gray-900 to-gray-950 overflow-hidden pt-10">
+    <div className="relative bg-gradient-to-b from-gray-900 to-gray-950 overflow-hidden pt-10 -mb-10">
       <div className="absolute inset-0 bg-black">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#ffffff33_1px,transparent_1px)] [mask-image:radial-gradient(circle_at_center,_black,transparent_90%)] [background-size:16px_16px]" />
       </div>

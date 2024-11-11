@@ -11,7 +11,7 @@ const companies = [
 
 export default function TrustedBy() {
   return (
-    <section className="py-16 bg-black relative overflow-hidden">
+    <section className="pb-16 pt-24 bg-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-2xl font-bold text-white mb-12">
           Trusted by leading companies worldwide

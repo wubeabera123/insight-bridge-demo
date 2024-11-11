@@ -9,6 +9,15 @@ const nextConfig: NextConfig = {
       },
       {
         hostname: 'plus.unsplash.com'
+      },
+      {
+        hostname: 'pbs.twimg.com'
+      },
+      {
+        hostname: 'assets.aceternity.com'
+      },
+      {
+        hostname: 'ideogram.ai'
       }
     ],
   },

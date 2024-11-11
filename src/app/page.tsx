@@ -4,6 +4,8 @@ import Pricing from "./components/Pricing";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 import TrustedBy from "./components/TrustedBy";
+import { BentoGridThirdDemo } from "./components/Features-Bento";
+import { FeaturesSectionDemo } from "./components/cta";
 
 export default function Home() {
   return (
@@ -12,7 +14,9 @@ export default function Home() {
       <TrustedBy />
       <Features />
       <Pricing />
+      <BentoGridThirdDemo/>
       <Testimonials />
+      <FeaturesSectionDemo/>
       <Footer />
     </div>
   );
