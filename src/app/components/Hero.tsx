@@ -10,46 +10,42 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#ffffff33_1px,transparent_1px)] [mask-image:radial-gradient(circle_at_center,_black,transparent_90%)] [background-size:16px_16px]" />
       </div>
-      <div className="h-px w-px absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="h-[40rem] w-[40rem] bg-blue-500/30 relative top-1/2 -translate-y-1/2 rounded-full blur-[128px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem]">
+        <div className="absolute inset-0 bg-blue-500/30 rounded-full blur-[128px]" />
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="flex flex-col gap-12">
-          <div className="space-y-8 text-center max-w-3xl mx-auto">
+          <div className="mx-auto max-w-3xl text-center space-y-8">
             <div className="space-y-4">
-              <h1 className="text-9xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 leading-tight">
-                <span className="font-bold">Bot</span>
+              <h1 className="text-7xl sm:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent leading-tight">
+                <span>Bot</span>
                 <span className="font-light">-Sensei</span>
               </h1>
-              <p className="text-xl max-w-[36rem] mx-auto text-blue-200">
-                Build, deploy, and scale intelligent Telegram bots with our no-code platform powered by cutting-edge AI so that you can focus on what REALLY MATTERS !
+              <p className="text-lg sm:text-xl max-w-2xl mx-auto font-light text-blue-200/90">
+                Build, deploy, and scale intelligent Telegram bots with our no-code platform powered by cutting-edge AI so that you can focus on what REALLY MATTERS!
               </p>
             </div>
             
-            <div className="flex gap-4 justify-center">
-              <HoverBorderGradient
-                containerClassName="rounded-full"
-                as="button"
-                className="border border-blue-600 flex items-center space-x-2 px-8 py-4"
-              >
-                <span>Create Bot &rarr;</span>
-              </HoverBorderGradient>
+            <div className="flex justify-center">
+            <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#60A5FA_0%,#1D4ED8_50%,#60A5FA_100%)]" />
+              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-10 py-4 text-lg font-bold text-white backdrop-blur-3xl">
+                Create Bot
+              </span>
+            </button>
             </div>
-
           </div>
 
           <div className="flex flex-col overflow-hidden -mt-64">
-            <ContainerScroll
-              titleComponent={null
-              }
-            >
+            <ContainerScroll titleComponent={null}>
               <Image
                 src="https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Bot Interface"
                 height={600}
                 width={1000}
-                className="mx-auto rounded-2xl object-cover h-full object-left-top"
+                className="mx-auto rounded-2xl object-cover h-full object-left-top shadow-xl shadow-blue-500/10"
                 draggable={false}
+                priority
               />
             </ContainerScroll>
           </div>
