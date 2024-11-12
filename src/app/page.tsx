@@ -5,12 +5,12 @@ import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 import TrustedBy from "./components/TrustedBy";
 import { BentoGridThirdDemo } from "./components/Features-Bento";
-import { FeaturesSectionDemo } from "./components/cta";
 import FAQ from "./components/FAQ";
 import { RevealOnScroll } from "./components/ui/reveal-on-scroll";
 import Header from "./components/header";
 import { CatchyIntro } from "./components/catchintro";
 import React from "react";
+import { BentoDemo } from "./components/Features-Bento2";
 
 function RevealLayout({ children }: { children: React.ReactNode }) {
   return React.Children.map(children, (child) => (
@@ -27,13 +27,14 @@ export default function Home() {
       <RevealLayout>
         <Hero />
         <TrustedBy />
-        <CatchyIntro />
         <Features />
         <Pricing />
+        <div className="w-1/2 mx-auto">
+          <BentoDemo/>
+        </div>
         <BentoGridThirdDemo/>
         <Testimonials />
         <FAQ />
-        {/* <FeaturesSectionDemo/> */}
         <Footer />
       </RevealLayout>
     </div>

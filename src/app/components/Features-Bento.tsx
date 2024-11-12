@@ -331,7 +331,7 @@ const items = [
     title: "User Analytics",
     description: (
       <span className="text-sm">
-        Track and analyze your bot's performance and user interactions.
+        Track and analyze your bot&apos;s performance and user interactions.
       </span>
     ),
     header: <SkeletonFour />,
