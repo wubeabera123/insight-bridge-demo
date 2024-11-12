@@ -11,7 +11,10 @@ interface RevealOnScrollProps {
 
 export function RevealOnScroll({ children, width = "fit-content" }: RevealOnScrollProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { 
+    margin: "-100px",
+    once: false
+  });
 
   return (
     <div ref={ref} style={{ width }}>

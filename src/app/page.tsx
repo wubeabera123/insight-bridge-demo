@@ -10,55 +10,32 @@ import FAQ from "./components/FAQ";
 import { RevealOnScroll } from "./components/ui/reveal-on-scroll";
 import Header from "./components/header";
 import { CatchyIntro } from "./components/catchintro";
+import React from "react";
+
+function RevealLayout({ children }: { children: React.ReactNode }) {
+  return React.Children.map(children, (child) => (
+    <RevealOnScroll width="100%">
+      {child}
+    </RevealOnScroll>
+  ));
+}
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-black">
-      <RevealOnScroll width="100%">
-        <Hero />
-      </RevealOnScroll>
-      
-      <RevealOnScroll width="100%">
-        <TrustedBy />
-      </RevealOnScroll>
-      
-      <RevealOnScroll width="100%">
-        <Features />
-      </RevealOnScroll>
-      
-      <RevealOnScroll width="100%">
-        <Pricing />
-      </RevealOnScroll>
-      
-      <RevealOnScroll width="100%">
-        <BentoGridThirdDemo/>
-      </RevealOnScroll>
-      
-      <RevealOnScroll width="100%">
-        <Testimonials />
-      </RevealOnScroll>
-      
-      <RevealOnScroll width="100%">
-        <FAQ />
-      </RevealOnScroll>
-      
-      <RevealOnScroll width="100%">
-        <FeaturesSectionDemo/>
-      </RevealOnScroll>
-      
-      <RevealOnScroll width="100%">
-        <Footer />
-      </RevealOnScroll>
       <Header />
-      <Hero />
-      <TrustedBy />
-      <CatchyIntro/>
-      <Features />
-      <Pricing />
-      <BentoGridThirdDemo />
-      <Testimonials />
-      <FeaturesSectionDemo />
-      <Footer />
+      <RevealLayout>
+        <Hero />
+        <TrustedBy />
+        <CatchyIntro />
+        <Features />
+        <Pricing />
+        <BentoGridThirdDemo/>
+        <Testimonials />
+        <FAQ />
+        <FeaturesSectionDemo/>
+        <Footer />
+      </RevealLayout>
     </div>
   );
 }
