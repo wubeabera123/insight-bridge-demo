@@ -65,7 +65,7 @@ const SkeletonOne = () => {
         variants={variants}
         className="flex flex-row rounded-full border border-white/[0.2] p-2  items-center space-x-2 bg-black"
       >
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
+        <div className="h-6 w-6 rounded-full bg-gradient-to-br from-sky-300 to-blue-500 flex-shrink-0" />
         <div className="w-full h-4 rounded-full bg-neutral-900" />
       </motion.div>
       <motion.div
@@ -73,13 +73,13 @@ const SkeletonOne = () => {
         className="flex flex-row rounded-full border border-white/[0.2] p-2 items-center space-x-2 w-3/4 ml-auto bg-black"
       >
         <div className="w-full  h-4 rounded-full bg-neutral-900" />
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
+        <div className="h-6 w-6 rounded-full bg-gradient-to-br from-sky-300 to-blue-500 flex-shrink-0" />
       </motion.div>
       <motion.div
         variants={variants}
         className="flex flex-row rounded-full border border-white/[0.2] p-2 items-center space-x-2 bg-black"
       >
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
+        <div className="h-6 w-6 rounded-full bg-gradient-to-br from-sky-300 to-blue-500 flex-shrink-0" />
         <div className="w-full  h-4 rounded-full bg-neutral-900" />
       </motion.div>
     </motion.div>
@@ -146,7 +146,7 @@ const SkeletonThree = () => {
       className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2] flex-col space-y-2"
       style={{
         background:
-          "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
+          "linear-gradient(-45deg, #3b82f6, #8b5cf6, #22c55e)",
         backgroundSize: "400% 400%",
       }}
     >
@@ -187,7 +187,7 @@ const SkeletonFour = () => {
         className="h-full w-1/3 rounded-2xl p-4 dark:bg-black border-white/[0.2] border  flex flex-col items-center justify-center"
       >
         <Image
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="https://images.unsplash.com/photo-1535378620166-273708d44e4c?q=80&w=3357&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="avatar"
           height="100"
           width="100"
@@ -196,13 +196,13 @@ const SkeletonFour = () => {
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
           Basic Telegram Bot
         </p>
-        <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
+        <p className="border border-blue-500 bg-blue-100 dark:bg-blue-900/20 text-blue-600 text-xs rounded-full px-2 py-0.5 mt-4">
           Starter
         </p>
       </motion.div>
       <motion.div className="h-full relative z-20 w-1/3 rounded-2xl p-4 bg-black border border-white/[0.3]  flex flex-col items-center justify-center">
         <Image
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="https://images.unsplash.com/photo-1535378620166-273708d44e4c?q=80&w=3357&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="avatar"
           height="100"
           width="100"
@@ -211,7 +211,7 @@ const SkeletonFour = () => {
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
           AI-Powered Bot
         </p>
-        <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
+        <p className="border border-teal-500 bg-teal-600 dark:bg-teal-900/20 text-white text-xs rounded-full px-2 py-0.5 mt-4">
           Pro
         </p>
       </motion.div>
@@ -220,7 +220,7 @@ const SkeletonFour = () => {
         className="h-full w-1/3 rounded-2xl p-4 bg-black border-white/[0.2] border  flex flex-col items-center justify-center"
       >
         <Image
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="https://images.unsplash.com/photo-1535378620166-273708d44e4c?q=80&w=3357&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="avatar"
           height="100"
           width="100"
@@ -229,7 +229,7 @@ const SkeletonFour = () => {
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
           Enterprise Bot Solution
         </p>
-        <p className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
+        <p className="border border-blue-500 bg-blue-800 dark:bg-blue-900/20 text-white text-xs rounded-full px-2 py-0.5 mt-4">
           Enterprise
         </p>
       </motion.div>
@@ -273,7 +273,7 @@ const SkeletonFive = () => {
         className="flex flex-row rounded-2xl border border-white/[0.2] p-2  items-start space-x-2 bg-black"
       >
         <Image
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="https://images.unsplash.com/photo-1535378620166-273708d44e4c?q=80&w=3357&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="avatar"
           height="100"
           width="100"
@@ -288,7 +288,7 @@ const SkeletonFive = () => {
         className="flex flex-row rounded-full border border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-autobg-black"
       >
         <p className="text-xs text-neutral-500">Start Building Now</p>
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
+        <div className="h-6 w-6 rounded-full bg-gradient-to-br from-sky-300 to-blue-500 flex-shrink-0" />
       </motion.div>
     </motion.div>
   );

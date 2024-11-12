@@ -33,7 +33,7 @@ export default function Home() {
         <BentoGridThirdDemo/>
         <Testimonials />
         <FAQ />
-        <FeaturesSectionDemo/>
+        {/* <FeaturesSectionDemo/> */}
         <Footer />
       </RevealLayout>
     </div>
