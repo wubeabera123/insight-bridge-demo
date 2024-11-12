@@ -6,18 +6,47 @@ import Footer from "./components/Footer";
 import TrustedBy from "./components/TrustedBy";
 import { BentoGridThirdDemo } from "./components/Features-Bento";
 import { FeaturesSectionDemo } from "./components/cta";
+import FAQ from "./components/FAQ";
+import { RevealOnScroll } from "./components/ui/reveal-on-scroll";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-black">
-      <Hero />
-      <TrustedBy />
-      <Features />
-      <Pricing />
-      <BentoGridThirdDemo/>
-      <Testimonials />
-      <FeaturesSectionDemo/>
-      <Footer />
+      <RevealOnScroll width="100%">
+        <Hero />
+      </RevealOnScroll>
+      
+      <RevealOnScroll width="100%">
+        <TrustedBy />
+      </RevealOnScroll>
+      
+      <RevealOnScroll width="100%">
+        <Features />
+      </RevealOnScroll>
+      
+      <RevealOnScroll width="100%">
+        <Pricing />
+      </RevealOnScroll>
+      
+      <RevealOnScroll width="100%">
+        <BentoGridThirdDemo/>
+      </RevealOnScroll>
+      
+      <RevealOnScroll width="100%">
+        <Testimonials />
+      </RevealOnScroll>
+      
+      <RevealOnScroll width="100%">
+        <FAQ />
+      </RevealOnScroll>
+      
+      <RevealOnScroll width="100%">
+        <FeaturesSectionDemo/>
+      </RevealOnScroll>
+      
+      <RevealOnScroll width="100%">
+        <Footer />
+      </RevealOnScroll>
     </div>
   );
 }

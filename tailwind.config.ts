@@ -78,6 +78,10 @@ const config = {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-50%)" },
         },
+        "infinite-scroll-reverse": {
+          from: { transform: "translateX(-50%)" },
+          to: { transform: "translateX(0)" },
+        },
         scroll: {
           from: { transform: "translateX(0)" },
           to: { transform: "translate(calc(-50% - 0.5rem))" },
@@ -86,7 +90,8 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "infinite-scroll": "infinite-scroll 20s linear infinite",
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
+        "infinite-scroll-reverse": "infinite-scroll-reverse 25s linear infinite",
         scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
     },
