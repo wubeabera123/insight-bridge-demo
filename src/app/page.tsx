@@ -6,12 +6,18 @@ import Footer from "./components/Footer";
 import TrustedBy from "./components/TrustedBy";
 import { BentoGridThirdDemo } from "./components/Features-Bento";
 import { FeaturesSectionDemo } from "./components/cta";
+<<<<<<< Updated upstream
 import FAQ from "./components/FAQ";
 import { RevealOnScroll } from "./components/ui/reveal-on-scroll";
+=======
+import Header from "./components/header";
+import { CatchyIntro } from "./components/catchintro";
+>>>>>>> Stashed changes
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-black">
+<<<<<<< Updated upstream
       <RevealOnScroll width="100%">
         <Hero />
       </RevealOnScroll>
@@ -47,6 +53,18 @@ export default function Home() {
       <RevealOnScroll width="100%">
         <Footer />
       </RevealOnScroll>
+=======
+      <Header />
+      <Hero />
+      <TrustedBy />
+      <CatchyIntro/>
+      <Features />
+      <Pricing />
+      <BentoGridThirdDemo />
+      <Testimonials />
+      <FeaturesSectionDemo />
+      <Footer />
+>>>>>>> Stashed changes
     </div>
   );
 }
