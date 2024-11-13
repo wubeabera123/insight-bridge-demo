@@ -1,7 +1,6 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TextAnimate } from './ui/text-animate';
 
 const faqs = [
   {
@@ -31,10 +30,6 @@ export default function FAQ() {
 
   return (
     <section className="relative overflow-hidden bg-black py-24">
-      {/* Gradient overlay */}
-      {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(circle_at_center,_black,transparent_75%)]" />
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" /> */}
-      
       {/* Middle gradient */}
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-blue-500/30 rounded-full blur-[128px] pointer-events-none" />
       
@@ -74,16 +69,17 @@ export default function FAQ() {
                 initial={false}
                 animate={{
                   height: openIndex === index ? "auto" : 0,
-                  opacity: openIndex === index ? 1 : 0
                 }}
                 transition={{
                   duration: 0.2,
-                  ease: "easeInOut"
+                  ease: "linear"
                 }}
                 className="overflow-hidden bg-gradient-to-b from-transparent to-blue-950/20"
               >
                 <div className="px-6 pb-4 pt-2">
-                  {openIndex === index && <TextAnimate text={faq.answer} />}
+                  <p className="text-blue-200/80">
+                    {faq.answer}
+                  </p>
                 </div>
               </motion.div>
             </div>
