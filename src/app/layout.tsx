@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "AI-Powered Rasa",
-  description: " Rasa Pro is a powerful AI-powered chatbot builder that helps you create intelligent chatbots for your business. With Rasa Pro, you can easily build chatbots that can handle complex conversations, provide personalized responses, and even learn from your customer interactions.",
+  title: "BOT-Sensei",
+  description: "BOT-Sensei is a powerful AI-powered Telegram bot platform that helps you create and monetize custom chatbots. Build intelligent Telegram bots that can engage users with natural conversations, automate tasks, and scale your SaaS business effortlessly.",
 };
 
 export default function RootLayout({
