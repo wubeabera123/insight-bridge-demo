@@ -14,22 +14,22 @@ import Image from "next/image";
 
 export function BentoGridThirdDemo() {
   return (
-    <section className="relative bg-gradient-to-b from-gray-950 via-black to-black overflow-hidden py-32">
+    <section className="relative bg-gradient-to-b from-blue-950 via-black to-black overflow-hidden py-32">
       {/* Background effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(circle_at_center,_black,transparent_75%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#0c4a6e0a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(circle_at_center,_black,transparent_75%)]" />
       
       <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2">
-        <div className="h-[40rem] w-[40rem] bg-blue-500/20 rounded-full blur-[128px]" />
+        <div className="h-[40rem] w-[40rem] bg-blue-600/20 rounded-full blur-[128px]" />
       </div>
 
       {/* Content container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Updated heading section */}
         <div className="text-center mb-20 space-y-4">
-          <h2 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600">
+          <h2 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500">
             Supercharge Your Telegram Presence
           </h2>
-          <p className="text-lg md:text-xl text-blue-200/90 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-blue-100/90 max-w-2xl mx-auto">
             Transform your ideas into powerful AI-driven bots with our cutting-edge platform
           </p>
         </div>
@@ -86,24 +86,24 @@ const SkeletonOne = () => {
     >
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-full border border-white/[0.2] p-2  items-center space-x-2 bg-black"
+        className="flex flex-row rounded-full border border-blue-400/[0.2] p-2  items-center space-x-2 bg-black"
       >
-        <div className="h-6 w-6 rounded-full bg-gradient-to-br from-sky-300 to-blue-500 flex-shrink-0" />
-        <div className="w-full h-4 rounded-full bg-neutral-900" />
+        <div className="h-6 w-6 rounded-full bg-gradient-to-br from-blue-300 to-blue-500 flex-shrink-0" />
+        <div className="w-full h-4 rounded-full bg-blue-900" />
       </motion.div>
       <motion.div
         variants={variantsSecond}
-        className="flex flex-row rounded-full border border-white/[0.2] p-2 items-center space-x-2 w-3/4 ml-auto bg-black"
+        className="flex flex-row rounded-full border border-blue-400/[0.2] p-2 items-center space-x-2 w-3/4 ml-auto bg-black"
       >
-        <div className="w-full  h-4 rounded-full bg-neutral-900" />
-        <div className="h-6 w-6 rounded-full bg-gradient-to-br from-sky-300 to-blue-500 flex-shrink-0" />
+        <div className="w-full  h-4 rounded-full bg-blue-900" />
+        <div className="h-6 w-6 rounded-full bg-gradient-to-br from-blue-300 to-blue-500 flex-shrink-0" />
       </motion.div>
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-full border border-white/[0.2] p-2 items-center space-x-2 bg-black"
+        className="flex flex-row rounded-full border border-blue-400/[0.2] p-2 items-center space-x-2 bg-black"
       >
-        <div className="h-6 w-6 rounded-full bg-gradient-to-br from-sky-300 to-blue-500 flex-shrink-0" />
-        <div className="w-full  h-4 rounded-full bg-neutral-900" />
+        <div className="h-6 w-6 rounded-full bg-gradient-to-br from-blue-300 to-blue-500 flex-shrink-0" />
+        <div className="w-full  h-4 rounded-full bg-blue-900" />
       </motion.div>
     </motion.div>
   );
@@ -141,7 +141,7 @@ const SkeletonTwo = () => {
           style={{
             maxWidth: Math.random() * (100 - 40) + 40 + "%",
           }}
-          className="flex flex-row rounded-full border border-white/[0.2] p-2  items-center space-x-2 bg-black w-full h-4"
+          className="flex flex-row rounded-full border border-blue-400/[0.2] p-2  items-center space-x-2 bg-black w-full h-4"
         ></motion.div>
       ))}
     </motion.div>
@@ -169,7 +169,7 @@ const SkeletonThree = () => {
       className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2] flex-col space-y-2"
       style={{
         background:
-          "linear-gradient(-45deg, #3b82f6, #8b5cf6, #22c55e)",
+          "linear-gradient(-45deg, #2563eb, #60a5fa, #3b82f6)",
         backgroundSize: "400% 400%",
       }}
     >
@@ -207,7 +207,7 @@ const SkeletonFour = () => {
     >
       <motion.div
         variants={first}
-        className="h-full w-1/3 rounded-2xl p-4 dark:bg-black border-white/[0.2] border  flex flex-col items-center justify-center"
+        className="h-full w-1/3 rounded-2xl p-4 dark:bg-black border-blue-400/[0.2] border  flex flex-col items-center justify-center"
       >
         <Image
           src="/telegram.png"
@@ -216,14 +216,14 @@ const SkeletonFour = () => {
           width="100"
           className="rounded-full h-10 w-10 grayscale"
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
+        <p className="sm:text-sm text-xs text-center font-semibold text-blue-500 mt-4">
           Basic Telegram Bot
         </p>
         <p className="border border-blue-500 bg-blue-100 dark:bg-blue-900/20 text-blue-600 text-xs rounded-full px-2 py-0.5 mt-4">
           Starter
         </p>
       </motion.div>
-      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl p-4 bg-black border border-white/[0.3]  flex flex-col items-center justify-center">
+      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl p-4 bg-black border border-blue-400/[0.3]  flex flex-col items-center justify-center">
         <Image
           src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=3432&auto=format&fit=crop"
           alt="avatar"
@@ -231,16 +231,16 @@ const SkeletonFour = () => {
           width="100"
           className="rounded-full h-10 w-10"
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
+        <p className="sm:text-sm text-xs text-center font-semibold text-blue-500 mt-4">
           AI-Powered Bot
         </p>
-        <p className="border border-teal-500 bg-teal-600 dark:bg-teal-900/20 text-white text-xs rounded-full px-2 py-0.5 mt-4">
+        <p className="border border-blue-500 bg-blue-600 dark:bg-blue-900/20 text-white text-xs rounded-full px-2 py-0.5 mt-4">
           Pro
         </p>
       </motion.div>
       <motion.div
         variants={second}
-        className="h-full w-1/3 rounded-2xl p-4 bg-black border-white/[0.2] border  flex flex-col items-center justify-center"
+        className="h-full w-1/3 rounded-2xl p-4 bg-black border-blue-400/[0.2] border  flex flex-col items-center justify-center"
       >
         <Image
           src="/enterprise.jpg"
@@ -249,7 +249,7 @@ const SkeletonFour = () => {
           width="100"
           className="rounded-full h-10 w-10"
         />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
+        <p className="sm:text-sm text-xs text-center font-semibold text-blue-500 mt-4">
           Enterprise Bot Solution
         </p>
         <p className="border border-blue-500 bg-blue-800 dark:bg-blue-900/20 text-white text-xs rounded-full px-2 py-0.5 mt-4">
@@ -293,7 +293,7 @@ const SkeletonFive = () => {
     >
       <motion.div
         variants={variants}
-        className="flex flex-row rounded-2xl border border-white/[0.2] p-2  items-start space-x-2 bg-black"
+        className="flex flex-row rounded-2xl border border-blue-400/[0.2] p-2  items-start space-x-2 bg-black"
       >
         <Image
           src="https://images.unsplash.com/photo-1676277791608-ac54525aa94d?q=80&w=3540&auto=format&fit=crop"
@@ -302,16 +302,16 @@ const SkeletonFive = () => {
           width="100"
           className="rounded-full h-10 w-10"
         />
-        <p className="text-xs text-neutral-500">
+        <p className="text-xs text-blue-400">
           Build powerful Telegram bots with our no-code platform and AI capabilities...
         </p>
       </motion.div>
       <motion.div
         variants={variantsSecond}
-        className="flex flex-row rounded-full border border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-autobg-black"
+        className="flex flex-row rounded-full border border-blue-400/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-autobg-black"
       >
-        <p className="text-xs text-neutral-500">Start Building Now</p>
-        <div className="h-6 w-6 rounded-full bg-gradient-to-br from-sky-300 to-blue-500 flex-shrink-0" />
+        <p className="text-xs text-blue-400">Start Building Now</p>
+        <div className="h-6 w-6 rounded-full bg-gradient-to-br from-blue-300 to-blue-500 flex-shrink-0" />
       </motion.div>
     </motion.div>
   );
@@ -326,7 +326,7 @@ const items = [
     ),
     header: <SkeletonOne />,
     className: "md:col-span-1",
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    icon: <IconClipboardCopy className="h-4 w-4 text-blue-500" />,
   },
   {
     title: "Automated Responses",
@@ -337,7 +337,7 @@ const items = [
     ),
     header: <SkeletonTwo />,
     className: "md:col-span-1",
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    icon: <IconFileBroken className="h-4 w-4 text-blue-500" />,
   },
   {
     title: "Smart Commands",
@@ -348,7 +348,7 @@ const items = [
     ),
     header: <SkeletonThree />,
     className: "md:col-span-1",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    icon: <IconSignature className="h-4 w-4 text-blue-500" />,
   },
   {
     title: "User Analytics",
@@ -359,7 +359,7 @@ const items = [
     ),
     header: <SkeletonFour />,
     className: "md:col-span-2",
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+    icon: <IconTableColumn className="h-4 w-4 text-blue-500" />,
   },
   {
     title: "Multi-language Support",
@@ -370,6 +370,6 @@ const items = [
     ),
     header: <SkeletonFive />,
     className: "md:col-span-1",
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-blue-500" />,
   },
 ];

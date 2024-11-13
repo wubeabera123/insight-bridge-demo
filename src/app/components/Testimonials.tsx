@@ -45,15 +45,6 @@ const reviews = [
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 
-const gradients = [
-  "bg-gradient-to-tr from-transparent via-blue-400/30 to-transparent",
-  "bg-gradient-to-br from-blue-400/30 via-transparent to-transparent",
-  "bg-gradient-to-bl from-transparent via-transparent to-blue-400/30",
-  "bg-gradient-to-r from-blue-400/30 via-transparent to-transparent",
-  "bg-gradient-to-l from-transparent via-blue-400/30 to-transparent",
-  "bg-gradient-to-t from-blue-400/30 via-transparent to-transparent",
-];
-
 const ReviewCard = ({
   img,
   name,
@@ -65,14 +56,11 @@ const ReviewCard = ({
   username: string;
   body: string;
 }) => {
-  const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
-  
   return (
     <figure
       className={cn(
         "relative w-96 cursor-pointer overflow-hidden rounded-xl border p-6",
-        "border-gray-50/[.1] bg-black hover:bg-gray-50/[.15]",
-        randomGradient
+        "border-gray-50/[.1] bg-gradient-to-br from-blue-600 to-blue-900 hover:bg-gray-50/[.15]"
       )}
     >
       <div className="flex flex-row items-center gap-4">

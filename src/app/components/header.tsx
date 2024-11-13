@@ -28,8 +28,8 @@ const Header = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 px-6 py-4",
         scrollProgress < 1
-          ? "bg-black/50 backdrop-blur-md border-b border-white/10"
-          : "bg-transparent",
+          ? "bg-black/30 backdrop-blur-xl border-b border-white/10"
+          : "bg-transparent backdrop-blur-lg bg-black/20",
         "after:absolute after:bottom-[-20px] after:left-0 after:right-0 after:h-[20px] after:bg-gradient-to-b after:from-black/20 after:to-transparent after:pointer-events-none"
       )}
       style={{
