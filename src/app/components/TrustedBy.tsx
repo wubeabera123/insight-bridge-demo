@@ -4,14 +4,14 @@ import Image from "next/image";
 const companies = [
   { name: "Adobe", logo: "/adobe.png", isSvg: false, width: 150, height: 60 },
   { name: "Google", logo: "/google.png", isSvg: false, width: 150, height: 60 },
-  { name: "Amazon", logo: "/amazon.png", isSvg: false, hasBackground: true, width: 180, height: 60 },
+  { name: "Amazon", logo: "/amazon.png", isSvg: false, hasBackground: true, width: 200, height: 60 },
   { name: "Next JS", logo: "/next.svg", isSvg: true, width: 150, height: 60 },
   // Add more companies as needed
 ];
 
 export default function TrustedBy() {
   return (
-    <section className="py-16 bg-black relative overflow-hidden">
+    <section className="py-8 bg-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-2xl font-bold text-white mb-12">
           Trusted by leading companies worldwide

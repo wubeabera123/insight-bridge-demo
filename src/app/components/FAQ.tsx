@@ -31,23 +31,22 @@ export default function FAQ() {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-gray-900 via-blue-900/10 to-gray-950 py-24">
-      {/* Enhanced gradient overlays */}
+      {/* Gradient overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(circle_at_center,_black,transparent_75%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#3b82f620_0%,transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_#1d4ed820_0%,transparent_50%)]" />
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
+      
+      {/* Middle gradient */}
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-blue-500/30 rounded-full blur-[128px] pointer-events-none" />
       
       {/* Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 relative">
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
+        <div className="text-center mb-16">
           <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 py-8">
             Frequently Asked Questions
           </h2>
           <p className="mt-4 text-lg text-blue-200/80">
             Everything you need to know about Bot-Sensei
           </p>
-          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
         </div>
 
         <div className="max-w-3xl mx-auto space-y-4">
@@ -92,9 +91,9 @@ export default function FAQ() {
         </div>
       </div>
 
-      {/* Enhanced decorative elements */}
-      <div className="absolute -left-32 -bottom-32 w-64 h-64 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full filter blur-[128px] opacity-20 animate-pulse" />
-      <div className="absolute -right-32 -top-32 w-64 h-64 bg-gradient-to-r from-blue-600 to-blue-500 rounded-full filter blur-[128px] opacity-20 animate-pulse" />
+      {/* Decorative elements */}
+      <div className="absolute -left-32 -bottom-32 w-64 h-64 bg-blue-500 rounded-full filter blur-[128px] opacity-20" />
+      <div className="absolute -right-32 -top-32 w-64 h-64 bg-blue-500 rounded-full filter blur-[128px] opacity-20" />
     </section>
   );
 } 

@@ -8,7 +8,6 @@ import { BentoGridThirdDemo } from "./components/Features-Bento";
 import FAQ from "./components/FAQ";
 import { RevealOnScroll } from "./components/ui/reveal-on-scroll";
 import Header from "./components/header";
-import { CatchyIntro } from "./components/catchintro";
 import React from "react";
 import { BentoDemo } from "./components/Features-Bento2";
 
