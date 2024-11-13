@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 
 const faqs = [
@@ -25,13 +25,30 @@ const faqs = [
   }
 ];
 
+const generateRandomGradient = () => {
+  const x = Math.random() * 100;
+  const y = Math.random() * 100;
+  const size = 50 + Math.random() * 100; // Reduced size for more subtle effect
+  const opacity = 0.05 + Math.random() * 0.1; // Much lower opacity
+  
+  return `radial-gradient(circle ${size}px at ${x}% ${y}%, rgba(59, 130, 246, ${opacity}) 0%, transparent 100%)`;
+};
+
 export default function FAQ() {
   const [openIndex, setOpenIndex] = React.useState<number | null>(null);
 
+  const cardGradients = useMemo(() => {
+    return faqs.map(() => {
+      const baseGradient = 'linear-gradient(to bottom, rgba(30, 58, 138, 0.1), rgba(30, 58, 138, 0.05))';
+      const numGradients = 2 + Math.floor(Math.random() * 2); // 2-3 gradients
+      const overlayGradients = Array(numGradients).fill(0).map(generateRandomGradient);
+      return [baseGradient, ...overlayGradients].join(', ');
+    });
+  }, []);
+
   return (
     <section className="relative overflow-hidden bg-black py-24">
-      {/* Middle gradient */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-blue-500/30 rounded-full blur-[128px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(circle_at_center,_black,transparent_75%)]" />
       
       {/* Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,7 +65,10 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="group rounded-lg border border-blue-500/20 bg-gray-900/40 backdrop-blur-sm overflow-hidden hover:border-blue-500/40 transition-colors duration-300"
+              className="group rounded-2xl border border-blue-500/20 backdrop-blur-sm overflow-hidden transition-all duration-300"
+              style={{
+                background: cardGradients[index]
+              }}
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -92,4 +112,4 @@ export default function FAQ() {
       <div className="absolute -right-32 -top-32 w-64 h-64 bg-blue-500 rounded-full filter blur-[128px] opacity-20" />
     </section>
   );
-} 
+}

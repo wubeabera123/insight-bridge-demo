@@ -15,7 +15,25 @@ export const TextGenerateEffect = ({
   duration?: number;
 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
+  const wordsArray = words.split(" ");
+
+  const getRandomStyle = () => {
+    const styles = [
+      "text-blue-300 hover:text-blue-400",
+      "text-blue-400 hover:text-blue-500",
+      "text-blue-500 hover:text-blue-600",
+      "text-blue-600 hover:text-blue-700"
+    ];
+    const transforms = [
+      "hover:scale-110",
+      "hover:skew-x-6",
+      "hover:-skew-x-6",
+      "hover:rotate-3",
+      "hover:-rotate-3"
+    ];
+    return `${styles[Math.floor(Math.random() * styles.length)]} ${transforms[Math.floor(Math.random() * transforms.length)]} transition-all duration-300`;
+  };
+
   useEffect(() => {
     animate(
       "span",
@@ -37,7 +55,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className="dark:text-white text-black opacity-0"
+              className={`opacity-0 ${getRandomStyle()}`}
               style={{
                 filter: filter ? "blur(10px)" : "none",
               }}
@@ -53,7 +71,7 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-bold", className)}>
       <div className="mt-4">
-        <div className=" dark:text-white text-black text-2xl leading-snug tracking-wide">
+        <div className="text-2xl leading-snug tracking-wide">
           {renderWords()}
         </div>
       </div>

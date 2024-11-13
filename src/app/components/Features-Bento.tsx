@@ -225,7 +225,7 @@ const SkeletonFour = () => {
       </motion.div>
       <motion.div className="h-full relative z-20 w-1/3 rounded-2xl p-4 bg-black border border-white/[0.3]  flex flex-col items-center justify-center">
         <Image
-          src="https://images.unsplash.com/photo-1535378620166-273708d44e4c?q=80&w=3357&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=3432&auto=format&fit=crop"
           alt="avatar"
           height="100"
           width="100"
@@ -296,7 +296,7 @@ const SkeletonFive = () => {
         className="flex flex-row rounded-2xl border border-white/[0.2] p-2  items-start space-x-2 bg-black"
       >
         <Image
-          src="https://images.unsplash.com/photo-1535378620166-273708d44e4c?q=80&w=3357&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://images.unsplash.com/photo-1676277791608-ac54525aa94d?q=80&w=3540&auto=format&fit=crop"
           alt="avatar"
           height="100"
           width="100"
