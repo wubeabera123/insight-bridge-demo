@@ -26,13 +26,13 @@ export default function Home() {
       <RevealLayout>
         <Hero />
         <TrustedBy />
-        <Features />
-        <Pricing />
         <div className="w-1/2 mx-auto">
           <BentoDemo/>
         </div>
-        <BentoGridThirdDemo/>
+        <Features />
         <Testimonials />
+        <BentoGridThirdDemo/>
+        <Pricing />
         <FAQ />
         <Footer />
       </RevealLayout>
