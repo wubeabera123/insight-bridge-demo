@@ -98,24 +98,24 @@ const Feature = ({
   return (
     <div className="relative">
       <div 
-        className="absolute inset-0 opacity-75 blur-lg animate-gradient"
+        className="absolute inset-0 opacity-90 blur-2xl animate-gradient"
         style={{
           background: `linear-gradient(45deg, 
             rgb(var(--color-1)), 
             rgb(var(--color-2)), 
             rgb(var(--color-3)), 
             rgb(var(--color-4)))`,
-          backgroundSize: "300% 300%",
+          backgroundSize: "500% 500%",
           borderRadius: "16px",
           "--color-1": "96, 165, 250",   /* blue-400 */
-          "--color-2": "147, 51, 234",   /* purple-600 */
-          "--color-3": "236, 72, 153",   /* pink-500 */
-          "--color-4": "59, 130, 246",   /* blue-500 */
+          "--color-2": "37, 99, 235",    /* blue-600 */
+          "--color-3": "29, 78, 216",    /* blue-700 */
+          "--color-4": "147, 51, 234",   /* purple-600 */
         } as React.CSSProperties}
       />
       
       <div 
-        className="relative h-full bg-black/90 border border-neutral-800/50 rounded-xl p-8 backdrop-blur-sm"
+        className="relative h-full bg-black/70 border border-neutral-800/50 rounded-xl p-8 backdrop-blur-sm"
       >
         <div className="space-y-6">
           <div className="text-blue-400">

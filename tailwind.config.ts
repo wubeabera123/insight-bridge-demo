@@ -174,7 +174,7 @@ const config = {
   			third: "moveInCircle 12s linear infinite",
   			fourth: "moveHorizontal 15s ease infinite",
   			fifth: "moveInCircle 8s ease infinite",
-  			gradient: 'gradient 10s ease infinite',
+  			gradient: 'gradient 3s linear infinite',
   		}
   	}
   },
