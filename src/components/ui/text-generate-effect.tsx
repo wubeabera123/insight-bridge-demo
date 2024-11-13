@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { useInView } from "framer-motion";
 
 export const TextGenerateEffect = ({
   words,
@@ -15,38 +16,28 @@ export const TextGenerateEffect = ({
   duration?: number;
 }) => {
   const [scope, animate] = useAnimate();
+  const isInView = useInView(scope);
   const wordsArray = words.split(" ");
 
-  const getRandomStyle = () => {
-    const styles = [
-      "text-blue-300 hover:text-blue-400",
-      "text-blue-400 hover:text-blue-500",
-      "text-blue-500 hover:text-blue-600",
-      "text-blue-600 hover:text-blue-700"
-    ];
-    const transforms = [
-      "hover:scale-110",
-      "hover:skew-x-6",
-      "hover:-skew-x-6",
-      "hover:rotate-3",
-      "hover:-rotate-3"
-    ];
-    return `${styles[Math.floor(Math.random() * styles.length)]} ${transforms[Math.floor(Math.random() * transforms.length)]} transition-all duration-300`;
+  const getStyle = () => {
+    return "text-blue-600 hover:scale-110 transition-all duration-300";
   };
 
   useEffect(() => {
-    animate(
-      "span",
-      {
-        opacity: 1,
-        filter: filter ? "blur(0px)" : "none",
-      },
-      {
-        duration: duration ? duration : 1,
-        delay: stagger(0.2),
-      }
-    );
-  }, [scope.current]);
+    if (isInView) {
+      animate(
+        "span",
+        {
+          opacity: 1,
+          filter: filter ? "blur(0px)" : "none",
+        },
+        {
+          duration: duration ? duration : 1,
+          delay: stagger(0.2),
+        }
+      );
+    }
+  }, [isInView, scope.current]);
 
   const renderWords = () => {
     return (
@@ -55,7 +46,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className={`opacity-0 ${getRandomStyle()}`}
+              className={`opacity-0 ${getStyle()}`}
               style={{
                 filter: filter ? "blur(10px)" : "none",
               }}
@@ -69,9 +60,9 @@ export const TextGenerateEffect = ({
   };
 
   return (
-    <div className={cn("font-bold", className)}>
-      <div className="mt-4">
-        <div className="text-2xl leading-snug tracking-wide">
+    <div className={cn("font-light", className)}>
+      <div className="mt-0">
+        <div className="text-4xl leading-snug tracking-wide">
           {renderWords()}
         </div>
       </div>

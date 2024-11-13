@@ -1,23 +1,26 @@
 "use client";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect"
 
-const words1 = "🤖 Unleash the power of AI in your Telegram chats! Our intelligent bots are here to transform your messaging experience.";
+const words1 = "Unleash the power of"
+const words2 = "AI Bots"
+const words3 = "in your Telegram chats with BOT-Sensei"
+const words4 = "No code, Only Innovation"
 
-const words2 = "✨ From automated responses to smart workflows, we're revolutionizing how you interact.";
-
-const words3 = "🚀 No coding required - just pure innovation at your fingertips. Build your perfect bot assistant today and watch your productivity soar! 💫";
 
 export function catchyLine() {
   return (
-    <div className="w-1/2 mx-auto py-12">
-      <div>
+    <div className="w-full md:w-1/2 mx-auto py-12 flex flex-col gap-4">
+      <div className="flex items-center justify-center gap-2">
         <TextGenerateEffect words={words1} />
-      </div>
-      <div>
+        <span className="text-2xl flex items-center bg-gradient-to-br from-blue-500 to-blue-700 rounded-full py-2 px-4 mx-2">🤖</span>
         <TextGenerateEffect words={words2} />
       </div>
-      <div>
+      <div className="flex items-center justify-center">
         <TextGenerateEffect words={words3} />
+        <span className="text-2xl flex items-center bg-gradient-to-br from-blue-500 to-blue-700 rounded-full py-2 px-4 mx-2">🧃</span>
+      </div>
+      <div className="flex justify-center">
+        <TextGenerateEffect words={words4} />
       </div>
     </div>
   );

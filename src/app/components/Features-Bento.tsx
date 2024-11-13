@@ -14,7 +14,7 @@ import Image from "next/image";
 
 export function BentoGridThirdDemo() {
   return (
-    <section className="relative bg-gradient-to-b from-blue-950 via-black to-black overflow-hidden py-32">
+    <section className="relative bg-black overflow-hidden py-32">
       {/* Background effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#0c4a6e0a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(circle_at_center,_black,transparent_75%)]" />
       
