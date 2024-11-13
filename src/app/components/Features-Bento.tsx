@@ -11,6 +11,7 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import dj from "../../../public/dj.png";
 
 export function BentoGridThirdDemo() {
   return (
@@ -157,24 +158,7 @@ const SkeletonThree = () => {
     },
   };
   return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      variants={variants}
-      transition={{
-        duration: 5,
-        repeat: Infinity,
-        repeatType: "reverse",
-      }}
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2] flex-col space-y-2"
-      style={{
-        background:
-          "linear-gradient(-45deg, #2563eb, #60a5fa, #3b82f6)",
-        backgroundSize: "400% 400%",
-      }}
-    >
-      <motion.div className="h-full w-full rounded-lg"></motion.div>
-    </motion.div>
+    <Image alt="Smart" width={2000} height={120} src={dj}/>
   );
 };
 const SkeletonFour = () => {
@@ -210,11 +194,11 @@ const SkeletonFour = () => {
         className="h-full w-1/3 rounded-2xl p-4 dark:bg-black border-blue-400/[0.2] border  flex flex-col items-center justify-center"
       >
         <Image
-          src="/telegram.png"
+          src="https://plus.unsplash.com/premium_photo-1678937608953-f4821e42dcdb?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="avatar"
           height="100"
           width="100"
-          className="rounded-full h-10 w-10 grayscale"
+          className="rounded-full h-10 w-10 "
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-blue-500 mt-4">
           Basic Telegram Bot
@@ -243,7 +227,7 @@ const SkeletonFour = () => {
         className="h-full w-1/3 rounded-2xl p-4 bg-black border-blue-400/[0.2] border  flex flex-col items-center justify-center"
       >
         <Image
-          src="/enterprise.jpg"
+          src="https://images.unsplash.com/photo-1542185400-f1c993ecbea2?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="avatar"
           height="100"
           width="100"
@@ -296,7 +280,7 @@ const SkeletonFive = () => {
         className="flex flex-row rounded-2xl border border-blue-400/[0.2] p-2  items-start space-x-2 bg-black"
       >
         <Image
-          src="https://images.unsplash.com/photo-1676277791608-ac54525aa94d?q=80&w=3540&auto=format&fit=crop"
+          src="https://plus.unsplash.com/premium_photo-1678937610952-94d467ca3b02?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="avatar"
           height="100"
           width="100"

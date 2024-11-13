@@ -18,6 +18,12 @@ const nextConfig: NextConfig = {
       },
       {
         hostname: 'ideogram.ai'
+      },
+      {
+        hostname: "cdn.dribbble.com"
+      },
+      {
+        hostname: "miro.medium.com"
       }
     ],
   },
