@@ -1,14 +1,14 @@
 import { Check } from 'lucide-react';
-import React from 'react';
+import React, { useMemo } from 'react';
 import { CardSpotlight } from './ui/card-spotlight';
 
 const plans = [
   {
-    name: 'Starter',
-    price: '$9',
+    name: 'Basic',
+    price: '$19',
     features: [
-      '1 Active Bot',
-      '1,000 Monthly Messages', 
+      '3 Active Bots',
+      '5,000 Monthly Messages', 
       'Basic Bot Templates',
       'Standard Support',
       'Basic Analytics'
@@ -16,24 +16,14 @@ const plans = [
   },
   {
     name: 'Professional',
-    price: '$29',
-    features: [
-      '5 Active Bots',
-      '10,000 Monthly Messages',
-      'Advanced Templates', 
-      'Priority Support',
-      'Advanced Analytics'
-    ]
-  },
-  {
-    name: 'Business',
-    price: '$79',
+    price: '$49',
     popular: true,
     features: [
       'Unlimited Active Bots',
-      '100,000 Monthly Messages',
-      'Custom Bot Development',
-      '24/7 Premium Support',
+      '50,000 Monthly Messages',
+      'Advanced Templates', 
+      'Priority Support',
+      'Advanced Analytics',
       'AI-Powered Features'
     ]
   },
@@ -45,12 +35,30 @@ const plans = [
       'Unlimited Messages',
       'Dedicated Account Manager',
       'SLA Guarantee',
-      'Custom Integrations'
+      'Custom Integrations',
+      'Custom AI Training'
     ]
   }
 ];
 
+const generateRandomGradient = () => {
+  const x = Math.random() * 100;
+  const y = Math.random() * 100;
+  const size = 300 + Math.random() * 500; // Increased size range
+  const opacity = 0.2 + Math.random() * 0.4; // Increased opacity range
+  
+  return `radial-gradient(circle ${size}px at ${x}% ${y}%, rgba(59, 130, 246, ${opacity}) 0%, transparent 70%)`; // Increased gradient reach
+};
+
 export default function Pricing() {
+  const cardGradients = useMemo(() => {
+    return plans.map(() => {
+      const numGradients = 1 + Math.floor(Math.random() * 3);
+      const gradients = Array(numGradients).fill(0).map(generateRandomGradient);
+      return gradients.join(', ');
+    });
+  }, []);
+
   return (
     <section className="relative bg-black py-24 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(circle_at_center,_black,transparent_75%)]" />
@@ -65,7 +73,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch max-w-5xl mx-auto">
           {plans.map((plan, index) => (
             <CardSpotlight 
               key={index}
@@ -74,6 +82,9 @@ export default function Pricing() {
                   ? 'ring-2 ring-blue-500/50 scale-105 shadow-lg shadow-blue-500/20' 
                   : 'hover:scale-[1.02] transition-transform duration-300'
               }`}
+              style={{
+                background: cardGradients[index]
+              }}
               color={plan.popular ? "rgba(29, 78, 216, 0.55)" : "rgba(59, 130, 246, 0.45)"}
             >
               <div className="flex-1">
