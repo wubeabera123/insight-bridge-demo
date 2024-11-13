@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import Image from "next/image";
+import Logo from "../../../public/logo.png";
 
 const Header = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -27,9 +29,7 @@ const Header = () => {
       animate={{ y: 0 }}
       className={cn(
         "fixed top-0 left-0 right-0 z-50 px-6 py-4",
-        scrollProgress < 1
-          ? "bg-black/30 backdrop-blur-xl border-b border-white/10"
-          : "bg-transparent backdrop-blur-lg bg-black/20",
+        "backdrop-blur-xl border-b border-white/10",
         "after:absolute after:bottom-[-20px] after:left-0 after:right-0 after:h-[20px] after:bg-gradient-to-b after:from-black/20 after:to-transparent after:pointer-events-none"
       )}
       style={{
@@ -37,8 +37,16 @@ const Header = () => {
       }}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-cyan-500">
-          YourBrand
+        <Link href="/" className="flex text-3xl font-bold bg-clip-text text-transparent ">
+          <Image
+            src={Logo}
+            alt="Bot Interface"
+            height={50}
+            width={50}
+            className="rounded-2xl object-cover"
+            draggable={false}
+            priority
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
