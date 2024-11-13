@@ -1,21 +1,25 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    });
-  }
+  useEffect(() => {
+    const handleScroll = () => {
+      // Calculate scroll progress from 0 to 1 over first 100px of scroll
+      const progress = Math.min(window.scrollY / 100, 1);
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Interpolate opacity from 0.65 to 0 based on scroll progress
+  const shadowOpacity = 0.65 * (1 - scrollProgress);
 
   return (
     <motion.header
@@ -23,11 +27,14 @@ const Header = () => {
       animate={{ y: 0 }}
       className={cn(
         "fixed top-0 left-0 right-0 z-50 px-6 py-4",
-        isScrolled
+        scrollProgress < 1
           ? "bg-black/50 backdrop-blur-md border-b border-white/10"
           : "bg-transparent",
         "after:absolute after:bottom-[-20px] after:left-0 after:right-0 after:h-[20px] after:bg-gradient-to-b after:from-black/20 after:to-transparent after:pointer-events-none"
       )}
+      style={{
+        boxShadow: `0 80px 200px 0 rgba(59,130,246,${shadowOpacity})`
+      }}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-cyan-500">
@@ -55,7 +62,7 @@ const Header = () => {
           </Link>
           <Link
             href="/get-started"
-            className="px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 text-white text-base font-medium hover:opacity-90 transition-opacity shadow-lg hover:shadow-blue-500/25"
+            className="px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 text-white text-base font-medium hover:opacity-90 transition-opacity shadow-[0_30px_80px_-15px_rgba(59,130,246,0.85)] hover:shadow-[0_40px_90px_-10px_rgba(59,130,246,1)]"
           >
             Get Started
           </Link>

@@ -3,6 +3,7 @@ import React from 'react';
 import { ContainerScroll } from '../../components/ui/container-scroll-animation';
 import Image from "next/image";
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
+import Dashboard from "../../../public/dashboard.png";
 
 export default function Hero() {
   return (
@@ -17,7 +18,7 @@ export default function Hero() {
         <div className="flex flex-col gap-12">
           <div className="mx-auto max-w-3xl text-center space-y-8">
             <div className="space-y-4">
-              <h1 className="text-7xl sm:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent leading-tight">
+              <h1 className="text-7xl sm:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent leading-tight">
                 <span>Bot</span>
                 <span className="font-light">-Sensei</span>
               </h1>
@@ -41,7 +42,7 @@ export default function Hero() {
               titleComponent={null}
             >
               <Image
-                src="https://images.unsplash.com/photo-1625314887424-9f190599bd56?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={Dashboard}
                 alt="Bot Interface"
                 height={600}
                 width={1000}
