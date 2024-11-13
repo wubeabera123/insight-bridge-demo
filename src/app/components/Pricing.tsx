@@ -52,7 +52,7 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section className="relative bg-gradient-to-b from-gray-900 to-gray-950 py-24 overflow-hidden">
+    <section className="relative bg-black py-24 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(circle_at_center,_black,transparent_75%)]" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

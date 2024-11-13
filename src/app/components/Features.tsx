@@ -57,7 +57,7 @@ export default function Features() {
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-gray-950 via-black to-black overflow-hidden py-32">
+    <section className="relative bg-black overflow-hidden py-32">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(circle_at_center,_black,transparent_75%)]" />
       
       <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2">

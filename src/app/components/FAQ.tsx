@@ -30,10 +30,10 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = React.useState<number | null>(null);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-gray-900 via-blue-900/10 to-gray-950 py-24">
+    <section className="relative overflow-hidden bg-black py-24">
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(circle_at_center,_black,transparent_75%)]" />
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
+      {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(circle_at_center,_black,transparent_75%)]" />
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" /> */}
       
       {/* Middle gradient */}
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-blue-500/30 rounded-full blur-[128px] pointer-events-none" />
