@@ -14,18 +14,41 @@ import Image from "next/image";
 
 export function BentoGridThirdDemo() {
   return (
-    <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
-      {items.map((item, i) => (
-        <BentoGridItem
-          key={i}
-          title={item.title}
-          description={item.description}
-          header={item.header}
-          className={cn("[&>p:text-lg]", item.className)}
-          icon={item.icon}
-        />
-      ))}
-    </BentoGrid>
+    <section className="relative bg-gradient-to-b from-gray-950 via-black to-black overflow-hidden py-32">
+      {/* Background effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(circle_at_center,_black,transparent_75%)]" />
+      
+      <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2">
+        <div className="h-[40rem] w-[40rem] bg-blue-500/20 rounded-full blur-[128px]" />
+      </div>
+
+      {/* Content container */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Updated heading section */}
+        <div className="text-center mb-20 space-y-4">
+          <h2 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600">
+            Supercharge Your Telegram Presence
+          </h2>
+          <p className="text-lg md:text-xl text-blue-200/90 max-w-2xl mx-auto">
+            Transform your ideas into powerful AI-driven bots with our cutting-edge platform
+          </p>
+        </div>
+
+        {/* Bento grid */}
+        <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
+          {items.map((item, i) => (
+            <BentoGridItem
+              key={i}
+              title={item.title}
+              description={item.description}
+              header={item.header}
+              className={cn("[&>p:text-lg]", item.className)}
+              icon={item.icon}
+            />
+          ))}
+        </BentoGrid>
+      </div>
+    </section>
   );
 }
 
@@ -187,11 +210,11 @@ const SkeletonFour = () => {
         className="h-full w-1/3 rounded-2xl p-4 dark:bg-black border-white/[0.2] border  flex flex-col items-center justify-center"
       >
         <Image
-          src="https://images.unsplash.com/photo-1535378620166-273708d44e4c?q=80&w=3357&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="/telegram.png"
           alt="avatar"
           height="100"
           width="100"
-          className="rounded-full h-10 w-10"
+          className="rounded-full h-10 w-10 grayscale"
         />
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
           Basic Telegram Bot
@@ -220,7 +243,7 @@ const SkeletonFour = () => {
         className="h-full w-1/3 rounded-2xl p-4 bg-black border-white/[0.2] border  flex flex-col items-center justify-center"
       >
         <Image
-          src="https://images.unsplash.com/photo-1535378620166-273708d44e4c?q=80&w=3357&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="/enterprise.jpg"
           alt="avatar"
           height="100"
           width="100"

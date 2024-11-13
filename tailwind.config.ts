@@ -151,10 +151,15 @@ const config = {
   				'50%': {
   					transform: 'translateY(50%)'
   				},
-  				'100%': {
-  					transform: 'translateY(-50%)'
-  				}
-  			}
+  				"100%": {
+  					transform: "translateY(-50%)",
+  				},
+  			},
+  			gradient: {
+  				'0%': { backgroundPosition: '0% 50%' },
+  				'50%': { backgroundPosition: '100% 50%' },
+  				'100%': { backgroundPosition: '0% 50%' },
+  			},
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
@@ -164,11 +169,12 @@ const config = {
   			scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
   			marquee: 'marquee var(--duration) infinite linear',
   			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
-  			first: 'moveVertical 10s ease infinite',
-  			second: 'moveInCircle 8s reverse infinite',
-  			third: 'moveInCircle 12s linear infinite',
-  			fourth: 'moveHorizontal 15s ease infinite',
-  			fifth: 'moveInCircle 8s ease infinite'
+  			first: "moveVertical 10s ease infinite",
+  			second: "moveInCircle 8s reverse infinite",
+  			third: "moveInCircle 12s linear infinite",
+  			fourth: "moveHorizontal 15s ease infinite",
+  			fifth: "moveInCircle 8s ease infinite",
+  			gradient: 'gradient 10s ease infinite',
   		}
   	}
   },

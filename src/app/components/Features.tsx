@@ -74,7 +74,7 @@ export default function Features() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <Feature key={feature.title} {...feature} index={index} />
           ))}
@@ -96,38 +96,43 @@ const Feature = ({
   index: number;
 }) => {
   return (
-    <div
-      className={cn(
-        "group relative p-8 transition-all duration-300",
-        "hover:bg-blue-950/30 hover:backdrop-blur-sm",
-        "border-neutral-800/50",
-        "first:rounded-tl-2xl last:rounded-br-2xl",
-        index === 0 && "lg:border-l",
-        index === 3 && "lg:rounded-tr-2xl",
-        index === 4 && "lg:rounded-bl-2xl",
-        index < 4 && "border-b",
-        index % 4 !== 3 && "border-r"
-      )}
-    >
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-500/0 to-blue-500/0 opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
+    <div className="relative">
+      <div 
+        className="absolute inset-0 opacity-75 blur-lg animate-gradient"
+        style={{
+          background: `linear-gradient(45deg, 
+            rgb(var(--color-1)), 
+            rgb(var(--color-2)), 
+            rgb(var(--color-3)), 
+            rgb(var(--color-4)))`,
+          backgroundSize: "300% 300%",
+          borderRadius: "16px",
+          "--color-1": "96, 165, 250",   /* blue-400 */
+          "--color-2": "147, 51, 234",   /* purple-600 */
+          "--color-3": "236, 72, 153",   /* pink-500 */
+          "--color-4": "59, 130, 246",   /* blue-500 */
+        } as React.CSSProperties}
+      />
       
-      <div className="relative space-y-6">
-        <div className="text-blue-400 group-hover:text-blue-300 transition-colors duration-300">
-          {icon}
-        </div>
+      <div 
+        className="relative h-full bg-black/90 border border-neutral-800/50 rounded-xl p-8 backdrop-blur-sm"
+      >
+        <div className="space-y-6">
+          <div className="text-blue-400">
+            {icon}
+          </div>
 
-        <div className="space-y-2">
-          <h3 className="text-xl font-semibold text-blue-100 group-hover:text-white transition-colors duration-300">
-            {title}
-          </h3>
-          
-          <p className="text-blue-300/80 group-hover:text-blue-200 text-sm leading-relaxed">
-            {description}
-          </p>
+          <div className="space-y-2">
+            <h3 className="text-xl font-semibold text-blue-100">
+              {title}
+            </h3>
+            
+            <p className="text-blue-300/80 text-sm leading-relaxed">
+              {description}
+            </p>
+          </div>
         </div>
       </div>
-
-      <div className="absolute left-0 top-8 w-1 h-12 bg-blue-500/30 group-hover:h-24 group-hover:bg-blue-400 transition-all duration-300" />
     </div>
   );
 };
