@@ -2,7 +2,6 @@
 import React from 'react';
 import { ContainerScroll } from '../../components/ui/container-scroll-animation';
 import Image from "next/image";
-import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
 import Dashboard from "../../../public/dashboard.png";
 
 export default function Hero() {

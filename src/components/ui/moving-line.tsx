@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import {
   motion,
-  useMotionValueEvent,
   useScroll,
   useSpring,
   useTransform,

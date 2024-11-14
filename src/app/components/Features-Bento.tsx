@@ -149,14 +149,14 @@ const SkeletonTwo = () => {
   );
 };
 const SkeletonThree = () => {
-  const variants = {
-    initial: {
-      backgroundPosition: "0 50%",
-    },
-    animate: {
-      backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
-    },
-  };
+  // const variants = {
+  //   initial: {
+  //     backgroundPosition: "0 50%",
+  //   },
+  //   animate: {
+  //     backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
+  //   },
+  // };
   return (
     <Image alt="Smart" width={2000} height={120} src={dj}/>
   );
