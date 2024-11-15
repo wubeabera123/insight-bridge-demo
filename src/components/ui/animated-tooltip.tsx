@@ -39,7 +39,7 @@ export const AnimatedTooltip = ({
 
   return (
     <>
-      {items.map((item) => (
+      {items.map((item, idx) => (
         <div
           className="-mr-4  relative group"
           key={item.name}

@@ -35,7 +35,7 @@ export const MaskContainer = ({
       }
     };
   }, []);
-  const maskSize = isHovered ? revealSize : size;
+  let maskSize = isHovered ? revealSize : size;
 
   return (
     <motion.div
