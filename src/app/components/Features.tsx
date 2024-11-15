@@ -1,5 +1,4 @@
 "use client";
-import { cn } from "@/lib/utils";
 import {
   IconAdjustmentsBolt,
   IconCloud,
@@ -88,7 +87,6 @@ const Feature = ({
   title,
   description,
   icon,
-  index,
 }: {
   title: string;
   description: string;

@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
+import {ReactNode} from "react";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import { Button } from "./button";
 
 const BentoGrid = ({
   children,
@@ -33,8 +33,9 @@ const BentoCard = ({
   cta,
 }: {
   name: string;
-  className: string;
+  className: string
   background: ReactNode;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Icon: any;
   description: string;
   href: string;

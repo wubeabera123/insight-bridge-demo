@@ -1,5 +1,5 @@
 "use client";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect"
+import { TextGenerateEffect } from "@/app/components/ui/text-generate-effect"
 
 const words1 = "Unleash the power of"
 const words2 = "AI Bots"
