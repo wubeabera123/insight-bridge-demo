@@ -17,7 +17,7 @@ export default function Hero() {
         <div className="flex flex-col gap-12">
           <div className="mx-auto max-w-3xl text-center space-y-8">
             <div className="space-y-4">
-              <h1 className="text-7xl sm:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent leading-tight">
+              <h1 className="mt-56 text-7xl sm:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent leading-tight">
                 <span>Bot</span>
                 <span className="font-light">-Sensei</span>
               </h1>
