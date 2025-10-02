@@ -3,11 +3,14 @@ import { articles } from "@/lib/articles";
 import ArticleBanner from "@/app/components/ui/ArticleBanner";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-export default function ArticleDetailPage({ params }: Props) {
-  const article = articles.find((a) => a.slug === params.slug);
+export default async function ArticleDetailPage({ params }: Props) {
+  // Await the params promise
+  const { slug } = await params;
+  
+  const article = articles.find((a) => a.slug === slug);
 
   if (!article) return notFound();
 
