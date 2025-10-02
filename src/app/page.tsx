@@ -5,7 +5,7 @@ import Pricing from "./components/Pricing";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 import TrustedBy from "./components/TrustedBy";
-import { BentoGridThirdDemo } from "./components/Features-Bento";
+import { Industries } from "./components/Features-Bento";
 import FAQ from "./components/FAQ";
 import { RevealOnScroll } from "./components/ui/reveal-on-scroll";
 import Header from "./components/header";
@@ -23,21 +23,21 @@ function RevealLayout({ children }: { children: React.ReactNode }) {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black">
-      <Header />
+    <div className="min-h-screen">
+      
       <RevealLayout>
         <Hero />
         <TrustedBy />
-        <CatchyLine />
-        <div className="w-1/2 mx-auto">
+        {/* <CatchyLine /> */}
+        {/* <div className="w-1/2 mx-auto">
           <BentoDemo/>
-        </div>
+        </div> */}
         <Features />
-        <Testimonials />
-        <BentoGridThirdDemo/>
-        <Pricing />
-        <FAQ />
-        <Footer />
+        {/* <Testimonials /> */}
+        <Industries/>
+        {/* <Pricing />
+        <FAQ /> */}
+        
       </RevealLayout>
     </div>
   );

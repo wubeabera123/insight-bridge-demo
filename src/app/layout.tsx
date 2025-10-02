@@ -1,7 +1,13 @@
+// "use client";
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeProvider } from "next-themes";
+import Header from "./components/header";
+import Footer from "./components/Footer";
 
+// fonts…
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -14,21 +20,30 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "BOT-Sensei",
-  description: "BOT-Sensei is a powerful AI-powered Telegram bot platform that helps you create and monetize custom chatbots. Build intelligent Telegram bots that can engage users with natural conversations, automate tasks, and scale your SaaS business effortlessly.",
+  title: "Insight-Bridge",
+  description: "Insight-Bridge",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
